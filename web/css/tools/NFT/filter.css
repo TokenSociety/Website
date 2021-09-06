@@ -1,0 +1,58 @@
+.TokenSociety_NFT_filter_tool ul {
+    padding: 0;
+    list-style: none;
+    float: right;
+    margin: 0;
+}
+
+.TokenSociety_NFT_filter_tool ul li {
+    margin: 10px;
+    border: 2px solid;
+    padding: 0px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.TokenSociety_NFT_filter_tool .tokensociety_nft_filter_tool_nft_user .Users_avatar_tool img {
+    height: 38px !important;
+}
+
+.TokenSociety_NFT_filter_tool .Users_avatar_tool .Streams_username,
+.TokenSociety_NFT_filter_tool .Users_avatar_tool .Streams_firstName {
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.TokenSociety_NFT_filter_tool li.tokensociety_nft_filter_tool_nft_user,
+.TokenSociety_NFT_filter_tool li.tokensociety_nft_filter_tool_nft_category {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tokensociety_nft_filter_tool_nft_user span.everyone[data-active=false] {
+    display: none;
+}
+
+.Communities_filter_publishers_dialog .Communities_filter_publishers_all {
+    background: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.Users_list_tool img.Users_avatar_icon {
+    border-radius: 50%;
+}
+
+@media (max-width:768px) {
+    .TokenSociety_NFT_filter_tool h2 {
+        text-align: center;
+    }
+
+    .TokenSociety_NFT_filter_tool ul {
+        text-align: center;
+        width: 100%;
+    }
+}

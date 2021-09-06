@@ -1,0 +1,238 @@
+.TokenSociety_featured_tool .step-one {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.TokenSociety_featured_tool .status-block h2 {
+    margin: 0;
+    display: inline-block;
+    font-size: 33px;
+}
+
+.TokenSociety_featured_tool .status-block .status {
+    font-size: 33px;
+    color: #f00;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.TokenSociety_featured_tool .category-info {
+    margin-left: auto;
+    font-size: 20px;
+    color: #929292;
+    text-transform: uppercase;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_header-second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 105px;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_header-second .tokensociety_featured_tool_col-eight {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_header-second .col-four {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.TokenSociety_featured_tool .tokensociety_featured_bnr {
+    max-width: 912px;
+    border: solid 1px #535353;
+    border-radius: 30px;
+    max-height: 490px;
+    overflow: hidden;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_bnr img {
+    display: block;
+    margin: auto;
+}
+
+.TokenSociety_featured_tool h1.tokensociety_featured_tool_header-title {
+    font-size: 50px;
+    margin: 50px 0 20px;
+    font-weight: 900;
+}
+
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_online-c li:nth-child(2) {
+    margin-left: 20px;
+}
+
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_online-c {
+    margin-bottom: 40px;
+}
+
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_bid-info li span {
+    font-size: 17px;
+}
+
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_bid-info li p,
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_bid-info li p span.tokensociety_featured_tool_hour-t,
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_bid-info li p span.tokensociety_featured_tool_m-t,
+.TokenSociety_featured_tool .col-four ul.tokensociety_featured_tool_bid-info li p span.tokensociety_featured_tool_s-t {
+    font-size: 33px;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_bid {
+    list-style: none;
+    padding: 0;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_bid li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_bid_place {
+    background: #fff;
+    padding: 15px 35px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 0px;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_bid_atwork {
+    border: 2px solid #fff;
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.TokenSociety_featured_tool .featured-time-detail {
+    display: flex;
+}
+
+.TokenSociety_featured_tool .featured-time {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #ddd;
+}
+
+.TokenSociety_featured_tool .featured-like {
+    float: right;
+}
+
+.TokenSociety_featured_tool .featured-bid-amount {
+    color: #ddd;
+}
+
+.TokenSociety_featured_tool .tokensociety_featured_tool_bid-info li p {
+    margin-bottom: 16px;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_online-c {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_online-c li {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: none;
+    position: relative;
+    z-index: 0;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_online-c li:nth-child(2) {
+    z-index: 1;
+    margin-left: -20px;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_online-c li img {
+    display: block;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_bid-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 92px;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_bid-info li {
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.TokenSociety_featured_tool ul.tokensociety_featured_tool_bid-info li p {
+    margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+    .TokenSociety_featured_tool .tokensociety_featured_tool_header-second .tokensociety_featured_tool_col-eight {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .TokenSociety_featured_tool .tokensociety_featured_tool_header-second .col-four {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .TokenSociety_featured_tool .tokensociety_featured_bnr img {
+        width: 100%;
+        height: auto;
+    }
+
+    .TokenSociety_featured_tool .tokensociety_featured_tool_header-second {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .TokenSociety_featured_tool .status-block h2 {
+        font-size: 30px;
+    }
+
+    .TokenSociety_featured_tool .status-block .status {
+        font-size: 26px;
+        margin-left: 0px;
+    }
+
+    .TokenSociety_featured_tool h1.tokensociety_featured_tool_header-title {
+        font-size: 38px;
+        margin: 30px 0 20px;
+    }
+
+    .TokenSociety_featured_tool .tokensociety_featured_tool_bid {
+        text-align: center;
+    }
+
+    .TokenSociety_featured_tool .tokensociety_featured_tool_bid_place {
+        padding: 15px 48px;
+        margin-right: 0;
+    }
+    .TokenSociety_featured_tool .tokensociety_featured_tool_header-second {
+        margin-bottom: 20px;
+    }
+}

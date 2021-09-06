@@ -1,0 +1,251 @@
+{
+	"Followers": "Followers",
+	"Following": "Following",
+	"Showcase": "Showcase",
+	"Created": "Created",
+	"LoadMore": "Load More",
+	"Follow": "Follow",
+	"dashboard": {
+		"Menu": "Menu",
+		"Home": "Home",
+		"Welcome": "Welcome",
+		"TokenSociety": "TokenSociety",
+		"Marketplace": "Marketplace",
+		"Create": "Create NFT",
+		"Interests": "Interests",
+		"About": "About",
+		"People": "People",
+		"Authors": "Creators",
+		"Events": "Events",
+		"Conversations": "Conversations",
+		"Profile": "Profile",
+		"Me": "Me",
+		"Communities": "Communities",
+		"LogIn": "creator log in",
+		"LogOut": "log out",
+		"SetMobileNumber": "Set Mobile Number",
+		"SetEmailAddress": "Set Email Address",
+		"Search": "&#x1f50d; Search items, collections & profiles",
+		"Explore": "Explore",
+		"HowItWorks": "How it works",
+		"Connect": "Connect Wallet"
+	},
+	"welcome": {
+		"Title": "{{1}}: welcome",
+		"Description": "Welcome to {{1}} application.",
+		"Welcome": "Welcome!",
+		"ToStart": "To start a new app, you should follow the instructions <a href='{{1}}'>here</a>.",
+		"RenderedInMs": "Oh, and by the way, this rendered in {{1}} ms.",
+		"RefreshPage": "Refresh the page a few times and see how efficient the Qbix Platform can be.",
+		"EvenFaster": "In fact, it can execute <a href='{{1}}'>even faster</a>.",
+		"TokenSociety": "TokenSociety.io",
+		"Tagline": "The Authenticated NFT Marketplace.",
+		"Commissions": "Create NFTs that earn commissions <span>wherever</span> they are sold!",
+		"WeAreLive": "TokenSociety.io is now live. ",
+		"Provenance": "Tools to prove and verify provenance of luxury items.",
+		"OnboardingAbout": "We are currently onboarding artists and collectors.<br>If you would like to join our community, please submit a request.",
+		"Register": "Request Membership"
+	},
+	"explore": {
+		"Title": "TokenSociety: explore",
+		"Description": "The list of all available NFTs from all creators. And also featured items if exists.",
+		"Keywords": "NFT, explore, featured NFT"
+	},
+	"me": {
+		"LinkSocialAccounts": "Link Social Accounts",
+		"EditBio": "Edit Bio",
+		"UploadCoverPhoto": "Upload Cover Photo",
+		"BecomeCreator": "Become a Creator",
+		"CreateCollection": "Create Collection"
+	},
+	"register": {
+		"About": "We are currently onboarding artists and collectors. If you would like to join our community, please submit a request."
+	},
+	"about": {
+		"About": "About {{1}}",
+		"CanWrite": "Here you can write something about this app or website.",
+		"OrRemove": "Or if you want, you can remove this page."
+	},
+	"errors": {
+		"Error": "Error",
+		"WalletAbsent": "The wallet not connected.",
+		"Rendering": "There were errors while rendering <span class='url'>{{1}}</span>",
+		"PriceRequired": "Price required!",
+		"TransactionFailed": "Transaction Failed",
+		"NetworkNotSupported": "The selected network is not supported. Supported network: {{supportedNetwork}}"
+	},
+	"notFound": {
+		"Explanation": "<span class='url'>{{1}}</span> doesn't point to anything."
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}}: charge processed for {{call 'user.displayName'}}",
+		"ThankForPayment": "Thank you for your payment to {{call 'publisher.displayName'}}",
+		"SubscribedToPlan": "{{call 'user.displayName'}} subscribed to {{plan.title}}",
+		"YouSubscribedToPlan": "You have been subscribed to {{plan.title'}}",
+		"Enabled": "Notifications have been enabled."
+	},
+	"NFT": {
+		"Title": "Information about {{title}} NFT",
+		"Description": "Detailed information about NFT",
+		"FixedBid": "Fixed bid",
+		"CurrentBid": "Current bid",
+		"StartingIn": "Starting in",
+		"EndingIn": "Ending in",
+		"CreateNFT": "Create an NFT",
+		"TitlePlaceholder": "Give your NFT a title",
+		"DescriptionPlaceholder": "Give your NFT a description",
+		"CreateYourNFT": "Create your NFT",
+		"Royalties": "Royalties",
+		"RoyaltyPlaceholder": "Optional. Amount paid to creator before transfer.",
+		"ExpirationDate": "Expiration Date",
+		"StartingDate": "Start Date",
+		"BidsBelowThisAmount": "Bids below this amount won't be allowed",
+		"MinimumBid": "Minimum bid",
+		"Price": "Price",
+		"Owner": "Owner",
+		"SelectCategory": "Select category",
+		"Day": "Day",
+		"Days": "Days",
+		"Hour": "Hour",
+		"Hours": "Hours",
+		"Minute": "Minute",
+		"Minutes": "Minutes",
+		"Second": "Second",
+		"Seconds": "Seconds",
+		"SalesCreator": "of sales will go to creator",
+		"Details": "Details",
+		"Bids": "Bids",
+		"History": "History",
+		"LoremIpsum": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"PutOnSale": "Put on sale",
+		"Transfer": "Transfer",
+		"PlaceBid": "Place Bid",
+		"NftName": "NFT name",
+		"DescribeYourNFT": "Please describe your NFT",
+		"NftPicture": "Picture to represent NFT",
+		"UploadFile": "Upload a file",
+		"PutOnMarketplace": "Put on marketplace",
+		"InstantPurchase": "Enter price to allow users instantly purchase your NFT",
+		"FixedPrice": "Fixed price",
+		"TimedAuction": "Timed auction",
+		"OpenForBids": "Open for bids",
+		"PriceOnePiece": "Enter price for one piece",
+		"EnterMinimumBid": "Enter Minimum bid",
+		"import": {
+			"importNFT": "Importing NFT's",
+			"fileNotFound": "Sorry, CSV file not found.",
+			"fileEmpty": "Sorry, CSV file is empty.",
+			"userIdNotFound": "user exist but id empty",
+			"errorLine": "line {{1}}",
+			"fieldNotFound": "Required field \"{{1}}\" not found",
+			"taskStreamInvalid": "task stream invalid",
+			"instructionsEmpty": "task stream instructions empty",
+			"complete": "Complete",
+			"activateUsers": "send activation message to users?",
+			"importProgress": "Progress",
+			"importOptions": "Options",
+			"sampleCSV": "Download Sample CSV",
+			"fileLabel": "Upload Spreadsheet:",
+			"errorsTitle": "Errors occurred"
+		},
+		"filter": {
+			"ByCategory" : {
+				"FilterByNFTCollections": "Filter by NFT Collections",
+				"ShowNFTCollection": "Show NFT collection in ...",
+				"AllCollections": "All Collections"
+			},
+			"ByUser": {
+				"AllAuthors": "All Authors",
+				"AllUsers": "Everyone",
+				"FilterByAuthors": "Filter by Authors"
+			}
+
+		}
+	},
+	"featured": {
+		"headerTitle": "The Society",
+		"CurrentBid": "Current bid",
+		"EndingIn": "Auction Ending in",
+		"PlaceBid": "Place a bid",
+		"ViewArtwork": "View artwork",
+		"amount": 0.91,
+		"currency": "ETH"
+	},
+	"profile": {
+		"Title": "TokenSociety profile for {{userName}}",
+		"Description": "User details",
+		"aboutPlaceholder": "Edit Bio"
+	},
+	"footer": {
+		"JoinTokenSociety": "Join Token Society",
+		"Join": "Join",
+		"Language": "Language",
+		"TokenSociety": "Token Society",
+		"Explore": "Explore",
+		"Marketplace": "Marketplace",
+		"HowItWorks": "How It Works",
+		"ConnectWallet": "Connect Wallet",
+		"Community": "Community",
+		"BecomeACreator": "Become A Creator",
+		"CreateAShowcase": "Create A Showcase",
+		"AboutUs": "About Us",
+		"FAQSupport": "FAQ / Support",
+		"Copyright": "Copyright",
+		"TokenSocietyLLC": "Token Society LLC",
+		"Terms": "Terms",
+		"Privacy": "Privacy",
+		"English": "English",
+		"French": "French"
+
+	},
+	"@override": {
+		"Users/content": {
+			"actions": {
+				"LogIn": "creator log in",
+				"LogOut": "log out"
+			},
+			"login": {
+				"title": "Welcome Creator",
+				"directions": "Enter your ID"
+			}
+		},
+		"Communities/content": {
+			"events": {
+				"Title": "Marketplace",
+				"filterByTitle": "Find items by name",
+				"New": "+ Create New NFT",
+				"filterEvents": "Filter events",
+				"NoneYet": "No items are listed available for sale during this time."
+			},
+			"interests": {
+				"Instructions": "In each of the next {{1}} categories,<br>{{2}} all the types of items you are interested in.<br>This is how you connect with other people in the community."
+			},
+			"onboarding": {
+				"profile": {
+					"Profile": "Marketplace participants want to know about token creators.<br>"
+				}
+			},
+			"speak": {
+				"onboarding": {
+					"name": {
+						"Welcome": "Welcome to {{CommunityName}}. The Curated NFT Marketplace."
+					},
+					"interests": {
+						"Commentary": "Please select the categories of NFTs you are interested in.",
+						"Notifications": "You need to allow notifications"
+					}
+				}
+			}
+		},
+		"onboarding": {
+			"Tap": "Tap",
+			"Click": "Click",
+			"Yes": "Yes",
+			"No": "No",
+			"name": {
+				"Preface": "Welcome to ",
+				"Placeholder": "Enter your full name"
+			}
+		}
+	}
+}

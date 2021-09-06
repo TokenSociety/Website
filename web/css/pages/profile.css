@@ -1,0 +1,205 @@
+#page button[name=social],
+#page button[name=coverPhoto],
+#page button[name=showcase],
+#page button[name=created],
+#page button[name=becomeCreator],
+#page button[name=createCollection] {
+    background: none;
+    border-radius: 20px;
+    border-color: #57ab6d;
+    box-shadow: none;
+}
+
+#page .banner-block {
+    background-size: cover;
+    background-position: center center;
+}
+#page .banner-block button[name=coverPhoto] {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.3);
+}
+#page button[name=social] {
+    display: none;
+}
+#page .self button[name=social],
+#page .self .banner-block button[name=coverPhoto] {
+    display: inline-block;
+}
+#Users_avatar-profile-avatar_tool .Users_avatar_name {
+    display: none;
+}
+
+#Users_avatar-profile-avatar_tool {
+    border-radius: 50%;
+    border: solid 1px #999999;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,-50%,0); /* use this approach for ios to work correct */
+    -ms-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    display: inline-block;
+}
+#Users_avatar-profile-name_tool .Users_avatar_name span {
+    display: inline-block;
+}
+
+.TokenSociety_profile .tokensociety_tab_menu_nft_block {
+    border-bottom: solid 1px #333333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.TokenSociety_profile .tab-menu-block {
+    text-align: left;
+    border-bottom: unset;
+    margin-bottom: unset;
+    padding-bottom: unset;
+}
+.TokenSociety_profile .tab-menu-block button {
+    float: right;
+}
+.Q_notMobile.TokenSociety_profile .tab-menu-block button {
+    margin-left: 10px;
+}
+.TokenSociety_profile .self .tab-menu-block button[name=created],
+.TokenSociety_profile .self .tab-menu-block button[name=showcase],
+.TokenSociety_profile .tab-menu-block button[name=createCollection],
+.TokenSociety_profile .tab-menu-block button[name=becomeCreator] {
+    display: none;
+}
+.TokenSociety_profile .self .tab-menu-block button[name=createCollection],
+.TokenSociety_profile .self .tab-menu-block button[name=becomeCreator] {
+    display: inline-block;
+}
+
+.punchline {
+    font-size: 20px;
+    font-weight: 600;
+    color: #929292;
+    margin-bottom: 50px;
+}
+.Streams_interests_tool .Q_expandable_tool h2 {
+    background: rgba(180, 200, 220, 0.7);
+}
+
+.header-list-itms .followers.Q_selected,
+.header-list-itms .followers.Q_selected span {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #57ab6d;
+}
+.header-list-itms .Communities_profile h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.header-list-itms .Communities_profile > h2 {
+    display: none;
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 0 0;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: grayscale(0.9)
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon[data-type=facebook] {
+    background-image: url(../../Q/plugins/Communities/img/icon_facebook.png);
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon[data-type=twitter] {
+    background-image: url(../../Q/plugins/Communities/img/icon_twitter.png);
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon[data-type=linkedin] {
+    background-image: url(../../Q/plugins/Communities/img/icon_linkedin.png);
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon[data-type=github] {
+    background-image: url(../../Q/plugins/Communities/img/icon_github.png);
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon[data-type=instagram] {
+    background-image: url(../../Q/plugins/Communities/img/icon_instagram.png);
+}
+
+.header-list-itms .Communities_profile[data-val=social] .Communities_social_icon:not([data-connected=""]) {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.Q_prompt.profile-social .Q_dialog_slot input{
+    height: 40px;
+    width: auto !important;
+}
+.Q_prompt.profile-social .Q_dialog_slot .Q_messagebox_done{
+    height: 40px !important;
+    padding: 0 15px !important;
+    border: 0 !important;
+}
+.profile-name .Users_avatar_tool {
+    overflow: unset;
+}
+
+@media (max-width: 768px) {
+    .profile-block .profile-name {
+        font-size: 23px !important;
+    }
+    .flex-container {
+        display: block !important;
+    }
+    .TokenSociety_profile .tab-menu-block {
+        text-align: left;
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+    .TokenSociety_profile .tab-menu-block button {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    #page .banner-block button[name=coverPhoto] {
+        top: 30%;
+    }
+    .Users_avatar_icon.Users_avatar_icon_200 {
+        width: 130px !important;
+        height: 130px !important;
+    }
+    #Users_avatar-profile-name_tool .Users_avatar_name span {
+        font-size: 18px;
+    }
+    .tokensociety_nft_form_details .fixed_details{
+        margin-top: 15px;
+    }
+    .tokensociety_nft_form_details .time_details{
+        margin-top: 15px;
+    }
+    .banner-container {
+        position: relative;
+        max-height: 200px !important;
+        text-align: center;
+    }
+    .TokenSociety_profile .tokensociety_tab_menu_nft_block {
+        flex-direction: column;
+        text-align: center;
+    }
+}

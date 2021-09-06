@@ -1,0 +1,1635 @@
+
+/**
+ * This CSS is just to get you started.
+ * Feel free to modify any of it for your own app.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('./icons.css');
+
+* { 
+	font-family: 'Poppins', sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+a { text-decoration: none; color: #0055ff; }
+a:visited { color: #aa88cc; }
+html { background: #f2f2f2; height: 100%; box-sizing: border-box; }
+body { height: 100%; overflow: hidden; touch-action: none; }
+h2 { margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: inherit; }
+table { table-layout: fixed; }
+
+:root {
+	--html-color: white;
+	--html-link-color: rgba(200, 200, 255, 0.8);
+	--content-bg-color: rgb(14, 12, 31);
+	--column-bg-color: black;
+}
+
+/* The various slot containers */
+#notices_slot {
+	position: fixed;
+	text-align: center;
+}
+#content_slot {
+	position: relative;
+	overflow-x: auto;
+}
+#dashboard_slot {
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	border: solid 0 #555; 
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 900;
+	text-align: left;
+	cursor: default; 
+	touch-action: manipulation;
+    box-shadow: #555 0 0 4px; -webkit-box-shadow: #555 0 0 4px; -moz-box-shadow: #555 0 0 4px;
+    background: #555; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#444)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #555,  #444); /* for firefox 3.6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#444444'); /* for IE */
+}
+#dashboard_slot * { color: white; font-size: 24px; }
+#dashboard_slot input,
+#dashboard_slot textarea { color: black; }
+
+.TokenSociety_temporary_dashboard {
+	display: none;
+}
+.TokenSociety_welcome #dashboard_slot .TokenSociety_temporary_dashboard {
+	display: block;
+	width: 100%;
+	text-align: left;
+	line-height: 20px;
+}
+.TokenSociety_welcome #dashboard_slot #dashboard {
+	display: none;
+}
+
+.Q_layout_widebar #page { position: absolute; width: 100%; top: 60px; bottom: 0; left: 50%; transform: translate(-50%, 0); }
+.Q_mobile #page { overflow: auto; top: 85px; }
+#dashboard_slot .Q_inplace_tool .Q_hover .Q_inplace_tool_static,
+#dashboard_slot .Q_inplace_tool .Q_hover .Q_inplace_tool_blockstatic { 
+	background: white;
+	color: #333;
+}
+.Q_mobile #dashboard .Users_avatar_icon { margin: 0; border-radius: 50%;}
+.Q_mobile #dashboard .Users_avatar_name { display: none; }
+.Q_mobile #page { position: absolute; }
+.Q_mobile #content_slot { height: 100%; padding-top: 10px; }
+
+#dashboard, #notices, #content { margin: auto; text-align: left; }
+#content { position: relative; }
+
+#dashboard { display: inline-block; width: 100%; }
+.Q_notMobile #dashboard { padding: 5px; }
+
+.Q_notMobile #dashboard_slot .TokenSociety_dashboard_logo {
+	overflow: hidden;
+	background: url(../img/icon/310.png) no-repeat;
+	background-size: contain;
+}
+.Q_mobile #dashboard_slot .TokenSociety_dashboard_logo {
+	display: inline-block; width: 40px; height: 40px; float: left;
+	background: url(../img/icon/40.png) no-repeat;
+}
+.Q_mobile #dashboard_slot .TokenSociety_dashboard_logo h1 {
+	display: none;
+}
+.Q_layout_sidebar #dashboard_slot .TokenSociety_dashboard_logo {
+	width: 100%;
+}
+
+/* Notices contents */
+#notices_slot { text-align: center; margin: auto; padding: 0; z-index: 5000; }
+#notices { margin: auto; }
+#notices_slot div.container { overflow: hidden; overflow-y: auto; }
+#notices_slot ul { list-style-type: none; padding: 0; margin: auto; width: 700px; max-width: 100%; border: solid 1px #555; border-top: solid 1px #aaa; box-shadow: 0 0 5px #222; -moz-box-shadow: 0 0 5px #222; -webkit-box-shadow: 0 0 5px #222; cursor: pointer; }
+#notices_slot li { list-style-type: none; padding: 0; margin: 0; text-align: center; background: #ffd4aa; border: 0; border-bottom: solid 1px #aaa; line-height: 30px; min-height: 30px; }
+#notices_slot ul.Q_errors * { background-color: #ebb; color: #500; }
+#notices_slot ul.Q_errors li { text-align: left; padding: 0 10px 0 10px; }
+#notices_slot .Q_field_name { float: right; font-size: 12px; padding-right: 10px; }
+#notices_slot button
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	padding: 2px 10px;
+	color: #69552e;
+	background: #F1E2C6;
+	box-shadow: 1px 1px 1px 0 #CCC;
+	border: none;
+}
+.Q_notTouchscreen #notices_slot button:active
+{
+	background: #f0d298;
+	margin-left: 6px;
+	box-shadow: none;
+}
+#notices_slot ul li span {
+	font-size: 12px;
+	line-height: 26px;
+}
+
+.Q_columns_tool {
+	z-index: 99999;
+}
+
+/* Dashboard contents */
+#dashboard>* { margin: 0; padding: 0; line-height: 40px; text-align: center; }
+#dashboard>h1 { float: left; padding: 5px; width: auto; }
+#dashboard>h2 { float: left; }
+#dashboard_user { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; float: right; }
+.Q_mobile #dashboard_user { max-width: 40%; }
+.Q_mobile.Users_loggedIn #dashboard_user { margin: 0; }
+.Q_mobile.Users_loggedOut #dashboard_user { line-height: 40px; }
+#dashboard .Q_contextual * { color: black; }
+#dashboard_user_contextual { display: none; }
+#dashboard td { vertical-align: middle; }
+#dashboard table { width: 100%; padding: 0; margin: 0; }
+#dashboard .Q_dashboard_logo { padding: 0; }
+#dashboard .Q_dashboard_logo a { padding: 5px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#dashboard .Q_dashboard_logo img { height: 40px; border-radius: 5px; }
+#dashboard .Q_dashboard_search { padding: 8px 10px 8px 10px; font-weight: bold; text-align: left; }
+#dashboard .Q_dashboard_search input {
+	width: 104px;
+	margin-right: 4px;
+	border-radius: 2em;
+	-moz-border-radius: 2em;
+	padding-left: 27px;
+	padding-right: 17px;
+	border: none;
+	border-top: 1px solid #CCC;
+	background: white url(../{{Q}}/img/search_icon.png) no-repeat;
+	color: #444;
+}
+
+/* Dashboard tabs */
+#dashboard .Q_tabs_tabs { border: 0; width: 100%; margin: auto; text-align: left; }
+#dashboard .Q_tabs_tab { margin: 0px; cursor: pointer; width: auto; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #f8f8f8; background: none; text-align: left; max-width: 100%; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+#dashboard .Q_tabs_tab.Streams_preview_tool { padding-left: 10px; }
+#dashboard .Q_tabs_compact.Q_tabs_horizontal { margin: 0; }
+#dashboard .Q_tabs_compact.Q_tabs_horizontal .Q_tabs_tab { padding: 5px 10px; background-color: #222; color: white; width: 100%; }
+#dashboard .Q_tabs_compact.Q_tabs_horizontal .Q_tabs_tab::before,
+#dashboard .Q_tabs_compact.Q_tabs_horizontal .Q_tabs_tab * { color: white; vertical-align: bottom; }
+#dashboard .Q_tabs_compact.Q_tabs_horizontal .Q_tabs_tab svg.Q_overflow_glyph_svg { fill: white; }
+#dashboard .Q_tabs_tab * { white-space: nowrap; overflow-x: hidden; overflow-y: visible; text-overflow: ellipsis; vertical-align: top; }
+#dashboard .Q_tabs_vertical .Q_tabs_tab { background: transparent; }
+#dashboard .Q_tabs_tab,
+#dashboard .Q_tabs_tab>* { cursor: pointer; }
+#dashboard .Q_tabs_tab { text-decoration: none; color: white; }
+.Q_notTouchscreen #dashboard .Q_tabs_tab:not(.Q_current):hover { background: rgba(100, 100, 100, 0.25); border-radius: 10px; }
+#dashboard .Q_tabs_tab img { margin-right: 10px; width: 30px; }
+#dashboard .Q_tabs_tab span { display: inline; text-align: left; }
+.Q_notMobile #dashboard .Q_tabs_tab.Q_current { background-color: transparent; color: white; }
+#dashboard .Q_tabs_tab.Q_current * { color: white; background: transparent; }
+#dashboard .Q_tabs_tab svg.Q_overflow_glyph_svg { fill: black; width: 28px; height: 28px; }
+.Q_notMobile.Q_layout_widebar #dashboard .Q_tabs_tool { height: 50px; display: inherit; }
+.Q_layout_sidebar #dashboard .Q_tabs_tab { padding: 5px; }
+body .Q_tabs_contextual .Q_listing li { text-align: left; }
+html .Q_listing img { height: 30px; }
+.Q_layout_widebar[data-dashboard-position=top] #dashboard .Q_tabs_tab.Q_current, .Q_layout_widebar[data-dashboard-position=top] #dashboard .Q_tabs_tab.Q_mouseover {
+	border-bottom: 1px dotted white;
+}
+
+/* inputs */
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+input[type=number],
+input.text,
+input.email,
+input.tel,
+input.password,
+input.number,
+textarea { border: 1px solid #ccc; border-bottom: 1px solid #aaa; background-color: #fefefe; cursor: text; font-family: "Trebuchet MS"; }
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input.text:focus,
+input.email:focus,
+input.tell:focus,
+input.password:focus,
+input.number:focus,
+textarea:focus { background: white; box-shadow: 0 1px 10px rgba(0,0,0,.15); -webkit-box-shadow: 0 1px 4px rgba(0,0,100,.15); -moz-box-shadow: 0 1px 4px rgba(0,0,100,.15); }
+input.placeholder,
+textarea.placeholder { color: #aaa; font-style: italic; }
+select:focus { outline: dotted 1px #779; }
+/* select { margin-top: 0.75em; } */
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=password],
+input[type=number],
+input.text,
+input.email,
+input.tel,
+input.password,
+input.number,
+textarea { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; padding: 0px 4px 0px 4px; }
+input[type=checkbox],
+input[type=radio] { margin-right: 5px; }
+html .Q_inplace_tool_fieldinput { padding: 0px; }
+
+#notices_slot { position: fixed; }
+.Q_mobile #dashboard_slot,
+.Q_mobile #notices_slot { width: 100%; left: 0; }
+.Q_mobile #dashboard>h2 { display: none; }
+.Q_mobile .Q_overlay { width: 90%; }
+
+/* The following lines are for cordova on iOS */
+.Q_notCordova .Q_top_background,
+.Q_notCordova .Q_bottom_background { display: none; }
+.Q_cordova .Q_top_background {
+	background: #f2f2f2;
+}
+.Q_cordova .Q_bottom_background {
+	background: #f2f2f2;
+}
+.Q_cordova.Q_notch .Q_top_background {
+	background: black;
+}
+.Q_cordova.Q_ios.Q_mobile #dashboard_slot { height: 50px; }
+.Q_cordova.Q_ios.Q_mobile #page { top: 50px; }
+.Q_cordova.Q_ios.Q_mobile.Q_notch #dashboard_slot {
+	top: env(safe-area-inset-top);
+	height: 50px;
+}
+.Q_cordova.Q_ios.Q_mobile.Q_notch #page { 
+	top: calc(env(safe-area-inset-top) + 50px);
+	height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 50px);
+}
+.Q_cordova.Q_ios.Q_mobile.Q_notch .Q_top_background {
+	background: black;
+    height: constant(safe-area-inset-top);
+    height: env(safe-area-inset-top);
+}
+
+/* The following lines are for a flatter look */
+html .Q_listing li { font-size: 18px; padding: 0 10px; line-height: 40px; text-align: left; border-top: solid 1px white; border-bottom: solid 1px #CCC; background: #f2f2f2; -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; white-space: nowrap; overflow: hidden;}
+.Q_dialog_title { background: #444; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#111111'); background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#333)); background: -moz-linear-gradient(top, #444, #333);}
+.TokenSociety .Q_button,
+.TokenSociety .Q_big_prompt .Q_button { background: #555; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#444444'); background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#444)); background: -moz-linear-gradient(top, #555, #444); height: 40px;padding: 0 20px;font-size: 20px;line-height: 38px;}
+.TokenSociety .Q_big_prompt .Q_button span {height: 40px; line-height: 40px;}
+.TokenSociety input,
+.TokenSociety button,
+.TokenSociety select {height: 40px;}
+.TokenSociety .Q_inplace_tool button {height: auto}
+
+html.TokenSociety_notFound #content,
+html.TokenSociety_errors #content { padding: 30px; text-align: center; overflow: hidden; text-overflow: ellipsis; }
+html.TokenSociety_notFound .url,
+html.TokenSociety_errors .url { font-weight: bold; text-decoration: underline; }
+
+span.c3 { font-weight: bold; }
+
+.Q_layout_widebar #dashboard, .Q_mobile #dashboard { display: block; }
+.Q_notMobile.Q_layout_widebar #dashboard { display: flex; justify-content: space-between; }
+.Q_notMobile .TokenSociety_dashboard_logo {  padding: 0; margin: 5px 0 0 10px; background-position: left top; }
+.Q_notMobile .TokenSociety_dashboard_logo h1 { margin: 0; padding: 0 0 0 50px; line-height: 40px; }
+.Q_notMobile.Q_layout_widebar #dashboard .Q_tabs_tool { text-align: center; }
+.Q_notMobile.Q_layout_widebar #dashboard .Q_tabs_tab { padding: 0 10px; }
+
+/* The following lines override default styles for a sidebar-style website */
+/* You can remove them or set the config Q/response/layout/sidebar = true */
+html.Q_notMobile { height: 100%; }
+.Q_layout_sidebar.Q_notMobile .UVSpinner_dashboard_logo { float: none; background-position: center top; background-repeat: no-repeat; padding-top: 100px; text-align: center; }
+.Q_layout_sidebar.Q_notMobile body { height: 100%; }
+.Q_layout_sidebar.Q_notMobile #dashboard .UVSpinner_dashboard_logo { background-position: center top; padding-top: 250px; }
+.Q_layout_sidebar.Q_notMobile #dashboard .UVSpinner_dashboard_logo h1 { padding: 0; display: none; max-height: none; }
+.Q_layout_sidebar.Q_notMobile #dashboard a { display: block; }
+.Q_layout_sidebar.Q_notMobile #dashboard>h1,
+.Q_layout_sidebar.Q_notMobile #dashboard>h2 { float: none; }
+.Q_layout_sidebar.Q_notMobile #dashboard .Q_tabs_tabs { text-align: left; }
+.Q_layout_sidebar.Q_notMobile #dashboard .Q_tabs_tab { display: block; margin: 0; }
+.Q_layout_sidebar.Q_notMobile #notices_slot { left: 0; top: 0; width: 100%; }
+.Q_layout_sidebar.Q_notMobile #dashboard_slot {
+	color: white;position: fixed; left: 5%; width: 20%; height: 90%; top: 5%; transform: none;
+}
+.Q_layout_sidebar.Q_notMobile #page { position: absolute; padding: 0; left: 25%; width: 70%; height: 90%; top: 5%; }
+.Q_layout_sidebar.Q_notMobile #content_slot { min-height: 100%; padding: 0; }
+.Q_layout_sidebar.Q_notMobile #content { padding: 20px; }
+.Q_layout_sidebar.Q_notMobile #Users_avatar_tool { width: 100%; background: #222; background: rgba(255,255,255,.05); }
+.Q_layout_sidebar.Q_notMobile #dashboard_user { float: none; position: absolute; width: 90%; left: 50%; transform: translate(-50%, 0); margin: 10px 0 10px 0;  text-align: center;  bottom: 0; }
+.Q_mobile #dashboard_user .Users_avatar_name { display: none; }
+
+html, body,
+#content_slot,
+#dashboard_slot,
+.TokenSociety_welcome #content {
+	background: black !important;
+}
+
+#content_slot,
+#dashboard_slot,
+.TokenSociety_welcome #content {
+	color: white;
+}
+
+#content h1 {
+	color: white;
+}
+
+:root {
+	--dashboard-main-color: white;
+	--dashboard-mobile-color: white;
+	--dashboard-mobile-current-color: white;
+	--button-border-color: gray;
+	--button-shadow-color: white;
+	--button-bg-color: #555555;
+	--button-bg-color-to: #222222;
+}
+
+#dashboard .Q_tab_assets::before,
+.Q_listing_wrapper .Q_tab_assets::before {
+	font-family: qplatform-assets;
+	content: "\f901";
+}
+
+#dashboard .Q_tab_create::before,
+.Q_listing_wrapper .Q_tab_create::before {
+	font-family: qplatform-create;
+	content: "\f901";
+}
+
+#dashboard .Q_tab_assets.Q_current::before,
+.Q_listing_wrapper .Q_tab_assets.Q_current::before {
+	font-family: qplatform-assets;
+	content: "\f900";
+}
+
+#dashboard .Q_tab_marketplace::before,
+.Q_listing_wrapper .Q_tab_marketplace::before {
+	font-family: qplatform-assets;
+	content: "\f903";
+}
+
+#dashboard .Q_tab_marketplace.Q_current::before,
+.Q_listing_wrapper .Q_tab_marketplace.Q_current::before {
+	font-family: qplatform-assets;
+	content: "\f902";
+}
+
+#dashboard_slot {
+	z-index: 2 !important;
+}
+
+.TokenSociety_welcome h1 {
+	padding: 0 20px; font-size: 40px; font-weight: 700;
+}
+
+.TokenSociety_welcome #content h2 {
+	margin: 0;
+	padding: 0; font-size: 30px; font-weight: 100;
+}
+
+.TokenSociety_welcome p {
+	padding: 0; font-size: 15px; font-weight: 100;
+}
+
+.TokenSociety_welcome button {
+	padding: 5px;
+}
+
+.TokenSociety table td {
+	text-align: left;
+}
+
+.TokenSociety table td.Catalogs_widecolumn {
+	text-align: center;
+}
+
+.TokenSociety_register_details * {
+	font-size: 14px;
+}
+
+.TokenSociety_register_details tr {
+	padding: 10px 0;
+}
+
+.TokenSociety_register_details input {
+	min-width: 200px;
+    margin-bottom: 8px;
+    height: 24px;
+}
+
+.TS_mockup {
+	box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.9);
+}
+
+.Q_mobile .TS_mockup {
+	width: 80%;
+}
+
+.d-none {
+	display: none;;
+}
+
+.Q_mobile h1 {
+	padding: 10px;
+	text-shadow: 0 0 25px rgba(100, 100, 255, 0.5);
+}
+
+.Q_mobile .TokenSociety_welcome p {
+	padding: 10px;
+}
+
+.Q_notMobile .TokenSociety_register_details {
+	zoom: 2;
+	margin: 0 auto;
+}
+
+.Q_mobile .TokenSociety_register_details {
+	margin: 10px;
+}
+
+.TC_mockups {
+	display: none;
+}
+
+.Q_notMobile #firstpart,
+.Q_notMobile #secondpart {
+	padding: 0;
+	width: 100%;
+}
+
+.Q_notMobile .TC_mockups {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.Q_notMobile .TC_mockups img {
+	width: 100%;
+}
+
+.Q_mobile .TC_mockups {
+	height: auto;
+	overflow: hidden;
+}
+
+.Users_loggedOut #Q_tabs-Communities_tool {
+	display: none;
+}
+
+.TokenSociety_logo {
+	height: 50px;
+}
+.Q_mobile #dashboard {
+	box-shadow: 2px 5px 10px rgb(78 105 128 / 50%);
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+	flex-wrap: wrap;
+}
+
+#dashboard, #dashboard * {
+	font-size: 14px !important;
+}
+
+#dashboard * {
+	color: #cccccc;
+}
+
+#dashboard input,
+#dashboard button {
+	border: 0;
+	border-radius: 10px;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+
+.Q_notMobile #dashboard input,
+.Q_notMobile #dashboard button {
+	margin: 0 20px;
+}
+.Q_notMobile #dashboard .TokenSociety_search_tool {
+	width: 300px;
+}
+.Q_mobile #dashboard .TokenSociety_search_tool {
+    width: 60%;
+	margin-left: 3%;
+}
+#dashboard input {
+	width: 100%;
+}
+#dashboard button {
+	font-weight: bold;
+}
+#dashboard input:focus {
+	outline: none;
+	background: rgba(255, 255, 255, 0.25);
+}
+
+#dashboard li:before {
+	display: none !important;
+}
+
+.Q_mobile #dashboard {
+	text-align: center;
+}
+
+.Q_mobile #dashboard .Q_tabs_tool {
+	margin: auto;
+}
+
+.TokenSociety_buttons #TokenSociety_connect {
+	display: none;
+}
+
+
+.qp-communities-people {
+	color: #FFFFFF;
+}
+.Q_aspect_who, .Q_aspect_who::before {
+	color: #FFFFFF;
+}
+
+.qp-communities-interests {
+	color: #FFFFFF;
+}
+
+.Streams_aspect_interests, .Streams_aspect_interests::before {
+	color: #FFFFFF;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.layout-container {
+	max-width: 1463px;
+	margin: 0 auto;
+	padding: 40px 5px 0;
+}
+
+.banner-container {
+	position: relative;
+	max-height: 305px;
+	text-align: center;
+}
+
+.banner-block {
+	max-width: 1463px;
+	min-height: 305px;
+	border-radius: 80px;
+	border: solid 1px #3a665c;
+	overflow: hidden;
+}
+
+.banner-block img {
+	display: block;
+}
+
+.profile-pic-container {
+	width: 163px;
+	height: 163px;
+	border-radius: 50%;
+	border: solid 1px #999999;
+	position: absolute;
+	bottom: -68px;
+	left: 50%;
+	right: 50%;
+	margin-left: -80.5px;
+	overflow: hidden;
+}
+
+ul.header-list-itms {
+	display: flex;
+	max-width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 25px 40px 0 40px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+ul.header-list-itms li {
+	font-size: 20px;
+	font-weight: 900;
+	color: #929292;
+}
+
+ul.header-list-itms li span {
+	color: #fff;
+}
+
+ul.header-list-itms li a {
+	display: block;
+}
+
+ul.header-list-itms li a.follow-btn {
+	font-size: 12px;
+	font-weight: 900;
+	display: block;
+	background: #8e8e8e;
+	color: #fff;
+	text-decoration: none;
+	line-height: 35px;
+	padding: 0 20px;
+	border-radius: 25px;
+	position: relative;
+	text-align: center;
+}
+
+ul.header-list-itms li:nth-child(5) {
+	margin-left: 40px;
+	margin-right: 60px;
+}
+
+ul.header-list-itms li {
+	margin-right: 15px;
+}
+
+ul.header-list-itms li a.insta {
+	background: url(../designs/social-ic.png) no-repeat 0 0;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+}
+
+ul.header-list-itms li a.fb {
+	background: url(../designs/social-ic.png) no-repeat -44px 0px;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+ul.header-list-itms li a.twi {
+	background: url(../designs/social-ic.png) no-repeat -87px 0px;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+}
+
+ul.header-list-itms li a.upload {
+	background: url(../designs/social-ic.png) no-repeat -11px -63px;
+	width: 13px;
+	height: 14px;
+}
+
+ul.header-list-itms li a.dots {
+	font-size: 25px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 7px;
+}
+
+ul.header-list-itms li:nth-child(1) {
+	margin-right: auto;
+}
+
+.profile-block {
+	max-width: 450px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 38px;
+
+}
+
+.profile-block .profile-name {
+	font-size: 33px;
+	font-weight: 600;
+	margin-bottom: 10px;
+
+	text-align: center;
+}
+
+.profile-block span {
+	display: block;
+}
+
+.designation {
+	font-size: 21px;
+	font-weight: 600;
+	color: #929292;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.s-name {
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+
+.tab-menu-block {
+	border-bottom: solid 1px #333333;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 900;
+	text-align: right;
+	margin: 0 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+.tab-menu-block a:not(:first-of-type) {
+	margin-left: 15px;
+}
+
+.tab-menu-block a {
+	color: #999999;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.tab-menu-block a.current {
+	color: #fff;
+}
+
+.row:before,
+.row:after {
+	display: table;
+	content: " ";
+}
+
+.row:after {
+	clear: both;
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+
+.clearfix {
+	display: block;
+	width: 100%;
+}
+.Q_columns_column .Q_controls_slot {
+	background: #000000;
+	border: 1px solid #fff;
+	border-left: 0;
+	border-right: 0;
+}
+.Q_column_people .Communities_fade_bottom {
+	background: none;
+	border: 2px solid #fff;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+a.loadmore {
+	width: 100%;
+	max-width: 890px;
+	line-height: 60px;
+	text-align: center;
+	display: block;
+	font-size: 20px;
+	font-weight: 900;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1b1a1a+0,191919+50,0f0f0f+100 */
+	background: #1b1a1a;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #1b1a1a 0%, #191919 50%, #0f0f0f 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1b1a1a 0%, #191919 50%, #0f0f0f 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1b1a1a 0%, #191919 50%, #0f0f0f 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1a1a', endColorstr='#0f0f0f', GradientType=0);
+	/* IE6-9 */
+	color: #fff;
+	text-decoration: none;
+	margin: 20px auto 50px;
+	border-radius: 30px;
+
+}
+
+footer {
+	width: 100%;
+	padding: 0 0 0;
+	border-top: solid 1px #333333;
+}
+
+.subscribe-form {
+	max-width: 330px;
+	position: relative;
+}
+
+.subscribe-form input {
+	background: #252525;
+	font-size: 20px;
+	color: #515151;
+	border-radius: 20px 0 0 20px;
+	border: none;
+	padding-left: 20px;
+	padding-right: 50px;
+}
+.TokenSociety_register_submit {
+    font-size: 16px;
+    width: 160px;
+    padding: 0;
+	line-height: 20px;
+    height: auto;
+}
+.subscribe-form button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 57px;
+	font-size: 20px;
+	padding: 0 30px;
+	font-weight: 900;
+	border-radius: 30px;
+	border: none;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6ead80+0,68a87b+50,3c7c50+100 */
+	background: #6ead80;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ead80', endColorstr='#3c7c50', GradientType=0);
+	/* IE6-9 */
+	color: #fff;
+	cursor: pointer;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+	outline: none;
+}
+
+.footer-block-1 p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.footer-block-1 {
+	max-width: 340px;
+	width: 100%;
+	margin-right: 20%;
+}
+
+p.gr-t {
+	color: #868686;
+	margin-top: 50px;
+	font-weight: 900;
+}
+
+.footer-block-1 select {
+	background: #252525;
+	width: 100%;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 900;
+	border-radius: 30px;
+	border: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+html .Q_column_people input,
+html .Q_column_people input:focus {
+	background: #252525;
+	color: #fff;
+}
+
+.select-col {
+	position: relative;
+}
+
+.select-col::after {
+	content: "";
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	padding: 5px;
+}
+
+p.footer-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.ft-section {
+	display: flex;
+	padding-bottom: 50px;
+	flex-wrap: wrap;
+}
+
+ul.footer-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+ul.footer-menu li {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+ul.footer-menu>li>a {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 30px;
+	display: block;
+}
+
+ul.footer-menu>li:last-child {
+	margin-left: auto;
+	margin-right: 100px;
+}
+
+ul.footer-menu>li ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.footer-menu>li ul li a {
+	color: #747474;
+	text-decoration: none;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.footer-block-2 {
+	flex: 2;
+}
+
+footer hr {
+	border: none;
+	border-top: solid 1px #333333;
+	margin-top: 90px;
+	margin-bottom: 0;
+}
+
+.footer-2 {
+	width: 100%;
+	padding: 30px 0;
+	background: #0b0b0b;
+	margin-bottom: 50px;
+	border-top: solid 1px #333333;
+}
+
+.container-ft {
+	max-width: 1463px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+ul.footer-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 900;
+	color: #515151;
+}
+
+.footer-2 .container-ft {
+	display: flex;
+}
+
+.footer-2 .container-ft .col-left {
+	width: 60%;
+}
+
+.footer-2 .container-ft .col-right {
+	width: 40%;
+}
+
+ul.footer-list li {
+	display: inline-block;
+}
+
+ul.footer-list li a {
+	color: #515151;
+	text-decoration: none;
+	display: block;
+}
+
+ul.footer-list li a.ic-1 {
+	background: url(../designs/social-ic.png) no-repeat 0 -133px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li a.ic-2 {
+	background: url(../designs/social-ic.png) no-repeat 0 -166px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li a.ic-3 {
+	background: url(../designs/social-ic.png) no-repeat 0 -208px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li a.ic-4 {
+	background: url(../designs/social-ic.png) no-repeat 0 -239px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li a.ic-5 {
+	background: url(../designs/social-ic.png) no-repeat 0 -271px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li a.ic-6 {
+	background: url(../designs/social-ic.png) no-repeat 0 -300px;
+	width: 35px;
+	height: 33px;
+}
+
+ul.footer-list li:nth-child(4) {
+	margin-left: auto;
+}
+
+ul.footer-list li:nth-child(2) {
+	margin-left: 50px;
+	margin-right: 20px;
+}
+
+ul.footer-list li:nth-child(5),
+ul.footer-list li:nth-child(7) {
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+ul.footer-list li:last-child {
+	margin-left: 35px;
+}
+
+ul.list-2 li {
+	margin-left: 20px !important;
+	
+	margin-right: 0 !important;
+}
+
+ul.list-2 {
+	text-align: right;
+}
+.Q_columns_column.Q_column_people .Q_column_slot {
+	padding-left: 0;
+	padding-right: 0;
+}
+.Streams_related_tool {
+	width: 100%;
+}
+
+.TokenSociety_author img {
+	border-radius: 50%;
+}
+.TokenSociety_profile_greeting {
+	border: 1px dotted #fff;
+}
+
+input[name=query].Streams_userChooser_input {
+	color: #fff;
+	background: #252525;
+}
+.TokenSociety_profile_greeting .Streams_inplace_tool {width: 100%;}
+
+/* interests tool mod */
+.Streams_interests_tool .Streams_interest_sep {display: none}
+.Streams_new_interest_title, .Streams_interest_title, .Streams_interest_title.Q_selected {
+	margin: 0 5px 5px 0;
+}
+.Streams_interests_tool .Q_expandable_container {
+	margin: 0;
+	padding: 0;
+}
+.Streams_interests_tool .Q_expandable_tool .Streams_interests_category_title:before {
+	font-family: tokensociety-icon;
+	font-size: 25px;
+	vertical-align: middle;
+	padding: 0 10px 0 10px;
+	line-height: 30px;
+}
+.Q_expandable_tool[data-name=entertainment_projects] .Streams_interests_category_title:before {
+	content: "\e913";
+}
+.Q_expandable_tool[data-name=art] .Streams_interests_category_title:before {
+	content: "\e90d";
+}
+.Q_expandable_tool[data-name=collectibles] .Streams_interests_category_title:before {
+	content: "\e903";
+}
+.Streams_interests_tool .Q_expandable_tool h2 span {
+	vertical-align: unset;
+}
+.Q_notMobile .Q_columns_stretchFirstColumn.Q_columns_animateWidth .Q_columns_column {
+	overflow: auto;
+}
+
+.Q_controls_slot .footer-block-1 p{
+	text-align: left;
+}
+
+.Q_controls_slot {
+	position: sticky !important;
+	bottom: 0;
+}
+
+.Q_controls_slot input, .Q_controls_slot button, .Q_controls_slot select {
+	height: 40px;
+}
+.Q_controls_slot .footer-block-2 ul.footer-menu li {
+	font-size: 20px;
+	font-weight: 900;
+	text-align: left;
+}
+.Q_controls_slot input{
+	width: 100%;
+	border: 0px solid !important;
+}
+.Q_mobile .Q_columns_column {
+	overflow: auto;
+}
+
+.TokenSociety_coming {
+	width: 100%;
+}
+.Q_notMobile .TokenSociety_coming {
+	display: flex;
+	justify-content: space-evenly;
+}
+.Q_mobile .TokenSociety_coming_item {
+	margin-top: 30px;
+}
+.TokenSociety_coming_item img {
+	border-radius: 5px;
+}
+.Q_mobile .TokenSociety_coming_item img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+img.TokenSociety_banner {
+	width: 100%;
+}
+
+table.TokenSociety_coming td {
+	text-align: center;
+}
+
+.Q_mobile table.TokenSociety_coming td {
+	width: 25%;
+	overflow: hidden;
+	vertical-align: top;
+}
+
+.Q_notMobile .TokenSociety_coming img {
+	height: 200px;
+}
+
+.Q_mobile .TokenSociety_coming img {
+	width: 90%;
+	height: auto;
+}
+
+.TokenSociety_coming img {
+	height: 200px;
+    border: solid 5px white;
+    box-shadow: 2px 2px 10px 10px rgb(150 50 150 / 20%);
+}
+
+.Q_mobile table.TokenSociety_coming {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.Q_notMobile.TokenSociety_welcome .pane {
+	display: inline-block;
+	vertical-align: middle;
+}
+.Q_notMobile.TokenSociety_welcome .pane1 {
+	text-align: center;
+	width: 40%;
+}
+.Q_notMobile.TokenSociety_welcome .pane2 {
+	text-align: center;
+	width: 50%;
+}
+
+.Q_notMobile.TokenSociety_welcome #content .pane3,
+.Q_mobile.TokenSociety_welcome #content .pane3 {
+	display: none;
+}
+.Q_notMobile.TokenSociety_welcome .muse-video-player {
+	width: 700px;
+	margin: auto;
+}
+.Q_notMobile.TokenSociety_welcome .comingsoon {
+	margin-top: 30px;
+}
+
+.TokenSociety_socials {
+	margin-top: 20px;
+}
+
+.TokenSociety_socials img {
+	width: 50px;
+	border-radius: 50%;
+	border: solid 5px rgba(255, 255, 255, 0.4);
+	filter: grayscale(100%);
+}
+
+.TokenSociety_socials a {
+	display: inline-block;
+	color: white;
+}
+
+@media (max-width:1440px) {
+
+	.layout-container,
+	.container-ft {
+		max-width: 1170px;
+	}
+
+	ul.header-list-itms li:nth-child(5) {
+		margin-left: 0px;
+		margin-right: 15px;
+	}
+
+    ul.header-list-itms li,
+    ul.bid-info li {
+        font-size: 18px;
+    }
+	.TokenSociety_register_details{
+		margin: 30px auto !important;
+	}
+	.TokenSociety_register_details input {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	.TokenSociety_register_submit{
+		width: 200px;
+    	margin: 15px 0;
+	}
+
+}
+
+@media (max-width:1200px) {
+
+	.layout-container,
+	.container-ft {
+		max-width: 960px;
+	}
+
+	.flex-container {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	ul.header-list-itms {
+		margin-top: 90px;
+	}
+	.TokenSociety_register_details{
+		margin: 30px auto !important;
+	}
+	.TokenSociety_register_details input {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	.TokenSociety_register_submit{
+		width: 200px;
+    	margin: 15px 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer-block-1 {
+		max-width: 100%;
+		width: 100%;
+		margin-right: 0;
+	}
+	.Streams_related_tool{
+		justify-content: space-between;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.subscribe-form {
+		max-width: 100%;
+		position: relative;
+	}
+
+	.subscribe-form,
+	.select-col {
+		max-width: 500px;
+
+		margin: 0 auto;
+	}
+
+	.footer-block-1 p {
+		text-align: center;
+	}
+
+	.select-col {
+		margin-bottom: 30px;
+	}
+
+	.footer-block-2 {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
+	.ft-section {
+		padding-bottom: 50px;
+	}
+
+	a.loadmore {
+		margin-bottom: 50px;
+	}
+	.TokenSociety_register_details{
+		margin: 30px auto !important;
+	}
+	.TokenSociety_register_details input {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	.TokenSociety_register_submit{
+		width: 200px;
+    	margin: 15px 0;
+	}
+
+}
+
+
+@media (max-width: 990px) {
+
+	.footer-2 .container-ft .col-left,
+	.footer-2 .container-ft .col-right {
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-2 .container-ft {
+		flex-direction: column;
+	}
+
+	ul.list-2 {
+		text-align: center;
+		margin-top: 30px;
+		width: 100%;
+	}
+
+	.footer-2 .container-ft .col-right {}
+}
+
+@media (max-width:768px) {
+	ul.footer-list li:nth-child(4) {
+		page-break-after: always;
+		/* CSS 2.1 syntax */
+		break-after: always;
+		/* New syntax */
+		flex-flow: wrap;
+    }
+	.TokenSociety_register_details{
+		margin: 30px auto !important;
+	}
+	.TokenSociety_register_details input {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	.TokenSociety_register_submit{
+		width: 200px;
+    	margin: 15px 0;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.Q_layout_widebar #dashboard .Q_tabs_tabs {
+		border: 0;
+		margin-right: 60px;
+	}
+	.banner-block {
+		min-height: 150px;
+	}
+	.s-name {
+		margin-bottom: 20px;
+	}
+	.TokenSociety_profile .self .tab-menu-block button {
+		margin-left: 0;
+	}
+
+	.banner-block img {
+		height: auto;
+		min-height: 150px;
+		width: auto;
+		max-width: 150%;
+	}
+
+	.profile-pic-container {
+		width: 120px;
+		height: 120px;
+		bottom: -50px;
+		margin-left: -60px;
+	}
+
+	.profile-pic-container img {
+		width: 100%;
+		height: auto;
+	}
+
+	.tab-menu-block {
+		font-size: 21px;
+	}
+
+	.tab-menu-block a {
+		margin-left: 20px;
+	}
+
+	.punchline {
+		margin-bottom: 20px;
+	}
+
+	ul.header-list-itms {
+		margin:0px;
+		justify-content: space-around;
+	}
+
+	ul.header-list-itms li:nth-child(1) {
+		margin-right: auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	ul.header-list-itms li {
+		margin-bottom: 10px;
+	}
+
+	ul.header-list-itms li {
+		margin-right: 0;
+	}
+
+    ul.header-list-itms li,
+    ul.bid-info li {
+        font-size: 14px;
+		margin-bottom: 0;
+    }
+
+	ul.header-list-itms li:nth-child(2),
+	ul.header-list-itms li:nth-child(3) {
+		width: 30%;
+		padding-bottom: 10px;
+		padding-bottom: 0;
+    margin: 0;
+	}
+	.profile-block {
+		padding-top: 15px;
+	}
+
+	ul.header-list-itms li:nth-child(3) {
+		text-align: right;
+    }
+
+	.TokenSociety_NFT_preview_tool {
+		margin-bottom: 10px;
+	}
+
+	a.loadmore {
+		line-height: 40px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    width: fit-content;
+    padding: 0 60px;
+	}
+
+	.layout-container {
+		padding: 5px 5px;
+	}
+	.step-one{
+		display: none !important;
+	}
+
+	.footer-block-1 {
+		margin-right: 0;
+	}
+
+	ul.footer-menu {
+		flex-wrap: wrap;
+	}
+
+	ul.footer-menu>li:last-child {
+		margin: 0;
+	}
+
+	ul.footer-menu>li>a {
+		margin-bottom: 10px;
+	}
+
+	.ft-section {
+		padding-bottom: 10px;
+	}
+
+	ul.footer-list {
+		font-size: 18px;
+		justify-content: center;
+	}
+
+	.footer-2 {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
+
+	.select-col {
+		position: relative;
+		margin-bottom: 30px;
+		width:99%;
+	}
+
+	ul.list-2 li {
+		margin-left: 10px !important;
+		margin-right: 0 !important;
+	}
+
+	ul.footer-menu li {
+		width: 100%;
+	}
+
+	.col-left ul.footer-list li {
+		display: block;
+	}
+
+	ul.footer-list li:nth-child(2) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	ul.footer-list li:last-child {
+		margin-left: 0;
+	}
+	.Streams_related_tool {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.banner-block {
+		border-radius: 40px;
+	}
+	.footer-block-2{
+		padding: 0 5px;
+	}
+	.TokenSociety_register_details input {
+		min-width: 220px;
+		height: 28px;
+		margin-bottom: 10px;
+	}
+	.TokenSociety_register_submit{
+		width: 170px;
+		margin-top: 10px;
+	}
+	#TokenSociety_create_dialog{
+		padding: 10px;
+	}
+	.follow{
+		margin-bottom: 0 !important;
+	}
+	.Q_controls_slot .footer-block-2 ul.footer-menu li {
+		font-size: 20px;
+		font-weight: 900;
+	}
+	.Q_controls_slot .footer-block-1 p {
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+

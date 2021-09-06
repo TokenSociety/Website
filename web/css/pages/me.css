@@ -1,0 +1,47 @@
+#page button[name=social],
+#page button[name=coverPhoto],
+#page button[name=becomeCreator],
+#page button[name=createCollection] {
+    background: none;
+    border-radius: 20px;
+    border-color: #57ab6d;
+    box-shadow: none;
+}
+
+#page .banner-block {
+    background-size: cover;
+    background-position: center center;
+}
+#page .banner-block button[name=coverPhoto] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.3);
+}
+#Users_avatar-me-avatar_tool .Users_avatar_name {
+    display: none;
+}
+
+#Users_avatar-me-avatar_tool {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 1px #999999;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#Users_avatar-me-name_tool .Users_avatar_name span {
+    display: inline-block;
+}
+
+.TokenSociety_me .tab-menu-block {
+    text-align: left;
+}
+.TokenSociety_me .tab-menu-block button {
+    margin-left: 15px;
+    float: right;
+}

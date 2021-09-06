@@ -1,0 +1,12 @@
+.TokenSociety_search_tool {
+    display: inline-block;
+}
+.TokenSociety_search_tool input:before {
+    content: '\f09f948d';
+}
+
+.TokenSociety_search_tool input:before {
+    background: transparent;
+    border: 0;
+    border-bottom: solid 1px white;
+}

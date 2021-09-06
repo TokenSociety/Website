@@ -1,0 +1,24 @@
+.TokenSociety_explore .TokenSociety_NFT_preview_tool.TokenSociety_NFT_ended {
+    display: none;
+}
+
+.tokensociety_market_place {
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #676363;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.tokensociety_market_place h2 {
+    font-size: 36px;
+}
+@media (max-width:768px) {
+    .tokensociety_market_place {
+        flex-direction: column;
+        text-align: center;
+    }
+}

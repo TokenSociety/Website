@@ -1,0 +1,17 @@
+syntax: regexp
+
+#Common ignores
+\.DS_Store$
+^\.git$
+^\.idea/
+^local/
+^files/Q/
+^files/TokenSociety/uploads/Users/(?!.dir).+
+^files/TokenSociety/uploads/Streams/(?!.dir).+
+^text/(?!TokenSociety)
+^web/Q/
+^config/Q/
+
+syntax: glob
+*.psd
+Platform-latest/*

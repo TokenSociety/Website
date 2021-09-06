@@ -1,0 +1,54 @@
+.TokenSociety_importNFT_tool {
+    text-align: left;
+}
+.TokenSociety_importNFT_tool .TokenSociety_importusers_process {
+    display: none;
+    margin: 10px 0 0;
+}
+.TokenSociety_importNFT_tool .TokenSociety_importNFT_process .TokenSociety_importNFT_complete {
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+.TokenSociety_importNFT_tool .TokenSociety_importNFT_process[data-status=complete] .TokenSociety_importNFT_progress {
+    display: none;
+}
+.TokenSociety_importNFT_tool .TokenSociety_importNFT_process[data-status=complete] .TokenSociety_importNFT_complete {
+    display: block;
+}
+.TokenSociety_importNFT_tool .TokenSociety_task_progress { border: 1px solid #555; }
+.TokenSociety_importNFT_tool .TokenSociety_task_progress_bar { background: #555; width: 0; height: 40px; }
+.TokenSociety_importNFT_errors tr:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+.TokenSociety_importNFT_errors tr td:first-child {
+    white-space: nowrap;
+    vertical-align: top;
+    font-weight: bold;
+}
+.TokenSociety_importNFT_tool fieldset {
+    border: 1px solid black;
+}
+.TokenSociety_importNFT_tool input[name=file] {
+    margin-bottom: 10px;
+}
+.TokenSociety_importNFT_tool label:not(:last-of-type) {
+    display: block;
+    margin-bottom: 10px;
+}
+.TokenSociety_importNFT_tool input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+}
+.TokenSociety_importNFT_tool h1 {
+    margin-bottom: 20px !important;
+    font-size: 22px;
+    text-align: center;
+    font-weight: normal;
+}
+.TokenSociety_importNFT_tool h1 label {
+    font-weight: bold;
+}

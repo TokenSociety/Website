@@ -1,0 +1,354 @@
+{
+	"Q": {
+		"app": "TokenSociety",
+		"appInfo" : {
+			"version" : "0.1.4",
+			"compatible": "0.1",
+			"requires": {
+				"Q": "1.0",
+				"Users": "1.0.4",
+				"Streams": "1.0.5",
+				"Catalogs": "0.1",
+				"Communities": "0.9"
+			},
+			"recognizes": {
+				"Q": "1.0",
+				"Users": "1.0.4",
+				"Streams": "1.0.5",
+				"Catalogs": "0.1",
+				"Communities": "0.9"
+			},
+			"connections": ["Users", "Streams"]
+		},
+		"plugins": ["Users", "Streams", "Places", "Websites", "Calendars", "Assets", "Catalogs", "Communities"],
+		"handlersBeforeEvent": {
+			"Q/responseExtras": ["TokenSociety/before/Q_responseExtras"]
+		},
+		"handlersAfterEvent": {
+			"Q/configure": ["TokenSociety/after/Q_configure"]
+		},
+		"routes": {
+			"metadata/:publisherId/:itemId": {"module": "TokenSociety", "action": "metadata"},
+			"NFT/:publisherId/:lastPart": {"module": "TokenSociety", "action": "NFT"},
+			"facebook/:action": {"module": "TokenSociety", "facebook": 1},
+			":action": {"module": "TokenSociety", "": "TokenSociety/moduleCanHandle"},
+			"": {"module": "TokenSociety", "action": "welcome"},
+			"explore": {"module": "TokenSociety", "action": "explore"},
+			"profile": {"module": "TokenSociety", "action": "profile"},
+			"profile/:userId": {"module": "TokenSociety", "action": "profile"}
+		},
+		"response": {
+			"slotNames": ["dashboard", "content", "dialogs", "title", "notices"],
+			"ajax": [],
+			"layout": {
+				"desktop": "TokenSociety/layout/desktop.php",
+				"tablet": "TokenSociety/layout/tablet.php",
+				"mobile": "TokenSociety/layout/mobile.php",
+				"sidebar": false
+			},
+			"cacheBaseUrl": "https://tokensociety.intercept"
+		},
+		"exception": {
+			"showTrace": true,
+			"showFileAndLine": true
+		},
+		"node": {
+			"headers": {
+				"Access-Control-Allow-Origin": "*"
+			}
+		},
+		"web": {
+			"languages": {"en": 1}
+		},
+		"bundle": {
+			"exclude": {
+				"TokenSociety": [
+					"action.php", "batch.php", "index.php", "fast.php", "Q.inc.php",
+					".htaccess", "Q/uploads"
+				]
+			}
+		},
+		"javascript": {
+			"uris": ["TokenSociety/home"]
+		},
+		"environments": {
+			"live": {
+				"files": {
+					"{{Q}}/css/Q.css": "css/all.css",
+					"{{Users}}/css/Users.css": "css/all.css",
+					"{{Streams}}/css/Streams.css": "css/all.css",
+					"css/TokenSociety.css": "css/all.css",
+					"{{Q}}/js/jquery-3.2.1.min.js": "js/all.js",
+					"{{Q}}/js/handlebars-v4.0.10.min.js": "js/all.js",
+					"{{Q}}/js/Q.js": "js/all.js",
+					"{{Users}}/js/Users.js": "js/all.js",
+					"{{Streams}}/js/Streams.js": "js/all.js",
+					"js/TokenSociety.js": "js/all.js"
+				},
+				"urls": {
+					"caching": true,
+					"integrity": true
+				}
+			},
+			"test": {
+				"urls": {
+					"caching": false,
+					"integrity": false
+				}
+			}
+		},
+		"text": {
+			"useLocale": false, /* run translate.php script first */
+			"TokenSociety": {
+				"dashboard.php": ["TokenSociety/content"],
+				"content": {
+					"*": ["TokenSociety/content", "Catalogs/content"]
+				},
+				"email": {
+					"*": ["TokenSociety/email"]
+				},
+				"sms": {
+					"*": ["TokenSociety/sms"]
+				},
+				"dialogs": {
+					"*": ["TokenSociety/dialogs"]
+				},
+				"invitations": {
+					"*": ["TokenSociety/invitations"]
+				},
+				"profile": {
+					"*": ["TokenSociety/content"]
+				}
+			}
+		},
+		"images": {
+			"lazyload": false,
+			"Users/cover": {
+				"sizes": ["1000x263", "1200x315", "1400x368"],
+				"defaultSize": "1200x315",
+				"defaultCacheBust": 1000,
+				"maxStretch": 3
+			},
+			"NFT/icon": {
+				"sizes": ["300x420", "500x700", "700x980"],
+				"defaultSize": "300x420",
+				"defaultCacheBust": 1000,
+				"maxStretch": 2
+			}
+		}
+	},
+	"Users": {
+		"transactional": {
+			"activation": {
+				"subject": ["TokenSociety/email", ["activation", "Subject"]],
+				"body": "TokenSociety/email/activation.php",
+				"sms": "TokenSociety/sms/activation.php"
+			},
+			"identifier": {
+				"subject": ["TokenSociety/email", ["identifier", "Subject"]],
+				"body": "TokenSociety/email/addEmail.php",
+				"sms": "TokenSociety/sms/addMobile.php"
+			},
+			"resend": {
+				"subject": ["TokenSociety/email", ["resend", "Subject"]],
+				"body": "TokenSociety/email/resend.php",
+				"sms": "TokenSociety/sms/resend.php"
+			},
+			"authenticated": {
+				"subject": false,
+				"body": false
+			}
+		},
+		"icon": {
+			"search": false
+		},
+		"uris": {
+			"TokenSociety/afterActivate": "TokenSociety/profile?demo=1",
+			"TokenSociety/successUrl": "TokenSociety/profile?demo=1"
+		},
+		"login": {
+			"identifierType": "email,mobile"
+		},
+		"onInsert": {
+			"labels": {
+				"Users/friends": ["Friends", "labels/Users/friends"],
+				"Users/business": ["Business", "labels/Users/business"]
+			},
+			"roles": {
+				"Users/owners": ["Owners", "labels/Users/owners"],
+				"Users/admins": ["Admins", "labels/Users/admins"],
+				"Users/members": ["Members", "labels/Users/members"],
+				"Users/guests": ["Guests", "labels/Users/guests"]
+			}
+		},
+		"quotas": {
+			"Streams/invite": {
+				"604800": {
+					"": 50,
+					"Users/admins": 10000
+				}
+			}
+		}
+	},
+	"Streams": {
+		"userStreams": {
+			"TokenSociety": "streams.json"
+		},
+		"types": {
+			"TokenSociety/NFT": {
+				"create": true,
+				"close": true,
+				"edit": true,
+				"defaults": {
+					"icon": "{{baseUrl}}/img/empty_white.png"
+				}
+			}
+		},
+		"possibleUserStreams": {
+			"Streams/user/birthday": true,
+			"Streams/user/gender": true,
+			"Streams/user/height": true
+		},
+		"notifications": {
+			"onlyIfAllClientsOffline": true
+		},
+		"onInsert": {
+			"community": ["TokenSociety/NFTs"],
+			"person": ["TokenSociety/user/NFTs"]
+		}
+	},
+	"Assets": {
+		"transactional": {
+			"charge": {
+				"subject": {"replace": ["TokenSociety/content", ["notifications", "ChargeProcessedFor"]]},
+				"body": "TokenSociety/email/charge.php",
+				"sms": "TokenSociety/sms/charge.php"
+			},
+			"charged": {
+				"subject": {"replace": ["TokenSociety/content", ["notifications", "ThankForPayment"]]},
+				"body": "TokenSociety/email/charged.php",
+				"sms": "TokenSociety/sms/charged.php"
+			},
+			"startSubscription": {
+				"subject": {"replace": ["TokenSociety/content", ["notifications", "SubscribedToPlan"]]},
+				"body": "TokenSociety/email/startSubscription.php",
+				"sms": "TokenSociety/sms/startSubscription.php"
+			},
+			"startedSubscription": {
+				"subject": {"replace": ["TokenSociety/content", ["notifications", "YouSubscribedToPlan"]]},
+				"body": "TokenSociety/email/startedSubscription.php",
+				"sms": "TokenSociety/sms/startedSubscription.php"
+			}
+		}
+	},
+	"Websites": {
+		"seoReload": true,
+		"permalinks": {
+			"routes": {},
+			"actions": {
+				"TokenSociety": [ /* actions that may get permalinks */ ]
+			}
+		}
+	},
+	"Communities": {
+		"onboarding": {
+			"steps": {"replace": ["name", "icon", "interests", "profile"]}
+		},
+		"people": {
+			"import": false,
+			"userIds": {
+				"customIconsFirst": true,
+				"includeFutureUsers": false
+			}
+		},
+		"events": {
+			"anyoneNewEvent": false,
+			"trips": true
+		},
+		"me": {
+			"tabs": {
+				"profile": true,
+				"inbox": true,
+				"schedule": false,
+				"assets": false,
+				"location": false,
+				"transactions": false,
+				"interests": true,
+				"myqr": false
+			}
+		},
+		"profile": {
+			"personal": false
+		},
+		"community": {
+			"hideUntilParticipants": 0
+		},
+		"layout": {
+			"dashboard": {
+				"mobile": "icons",
+				"withTitles": true,
+				"position": "top"
+			},
+			"columns": {
+				"style": "classic"
+			}
+		}
+	},
+	"TokenSociety": {
+		"chainNetworks": {
+			"0x4": {
+				"current": false,
+				"name": "Rinkeby",
+				"contract": "0x0934E0B1Ad11C019D9009473Ae42139386857769"
+			},
+			"0x1": {
+				"current": false,
+				"name": "Ethereum Mainnet",
+				"contract": "???"
+			},
+			"0x61": {
+				"current": true,
+				"name": "Smart Chain Testnet",
+				"contract": "0x830e8a0787c5f3a9b5bb5c4c9c1bb5141216311e"
+			},
+			"0x38": {
+				"current": false,
+				"name": "Binance SmartChain",
+				"contract": "0xcc771bafe41f29fb6f88dc8939560bc511c6433e"
+			}
+		},
+		"currencies": {
+			"BNB": {
+				"0x4": "0x5eD8BD53B0c3fa3dEaBd345430B1A3a6A4e8BD7C",
+				"0x1": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+				"0x61": "0x0000000000000000000000000000000000000000",
+				"commission_token": "0x1543580c3AE98385E2655894bC89461B7f3E17F7"
+			}/*,
+			"USDC": {
+				"0x4": "0x5eD8BD53B0c3fa3dEaBd345430B1A3a6A4e8BD7C",
+				"0x1": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+				"0x38": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+				"0x61": "0x1543580c3AE98385E2655894bC89461B7f3E17F7"
+			},
+			"ETH": {
+				"0x4": "0x0000000000000000000000000000000000000000",
+				"0x1": "0x0000000000000000000000000000000000000000",
+				"commission_token": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"0x38": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+				"0x61": "0x1543580c3AE98385E2655894bC89461B7f3E17F7"
+			},
+			"DAI": {
+				"0x4": "0x5eD8BD53B0c3fa3dEaBd345430B1A3a6A4e8BD7C",
+				"0x1": "0x6b175474e89094c44da98b954eedeac495271d0f",
+				"0x38": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+				"0x61": "0x1543580c3AE98385E2655894bC89461B7f3E17F7"
+			},
+			"BUSD": {
+				"0x4": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+				"0x1": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+				"0x38": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+				"0x61": "0x1543580c3AE98385E2655894bC89461B7f3E17F7"
+			}*/
+		}
+	}
+}

@@ -1,0 +1,625 @@
+.TokenSociety_NFT_preview_tool .tile-block {
+    border: solid 1px #535353;
+    border-radius: 30px;
+    padding: 10px;
+    height: 650px;
+}
+
+.TokenSociety_NFT_preview_tool p.categories {
+    font-size: 13px;
+    font-weight: 900;
+    color: #929292;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.TokenSociety_NFT_preview_tool p.categories span {
+    display: block;
+    white-space: nowrap;
+}
+.TokenSociety_NFT_preview_tool .video-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.TokenSociety_NFT_preview_tool .NFT_preview_owner {
+    display: none;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+.TokenSociety_NFT_preview_tool[data-owned=true] .NFT_preview_owner {
+    display: block;
+}
+
+.TokenSociety_NFT_preview_tool[data-active=false] {
+    display: none;
+}
+
+.TokenSociety_NFT_preview_tool .video-container .v-btn {
+    width: 33px;
+    height: 33px;
+    background: url(../../../designs/video-btn.png) no-repeat 0 0;
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin-left: -5px;
+    margin-top: -12px;
+}
+
+.TokenSociety_NFT_preview_tool h2.tile-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #8d8d8d;
+    font-weight: 900;
+    border-top: solid 1px #414141;
+    border-bottom: solid 1px #414141;
+    padding: 10px 0;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.TokenSociety_NFT_preview_tool .NFT_preview_icon {
+    display: block;
+}
+.TokenSociety_NFT_preview_tool .action-block {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.TokenSociety_NFT_preview_tool .likes {
+    font-size: 25px;
+    cursor: pointer;
+    min-width: 100px;
+}
+.TokenSociety_NFT_preview_tool .likes:before {
+    font-family: tokensociety-icon;
+    content: "\e900";
+    margin-right: 10px;
+}
+.TokenSociety_NFT_preview_tool .likes.Q_selected:before {
+    content: "\e9da";
+}
+.TokenSociety_NFT_preview_tool .likes.Q_selected {
+    background: none;
+    border: none;
+    color: #57ab6d;
+}
+.TokenSociety_NFT_preview_tool .forward-btn:before {
+    font-family: tokensociety-icon;
+    content: "\e901";
+    font-size: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.TokenSociety_NFT_preview_tool .tile-block {
+    cursor: pointer;
+}
+
+#page .TokenSociety_NFT_preview_tool button[name=soldOut],
+#page .TokenSociety_NFT_preview_tool button[name=placeBid] {
+    border: none;
+    box-shadow: none;
+    margin-left: auto;
+    font-size: 21px;
+    font-weight: 900;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6ead80+0,68a87b+50,3c7c50+100 */
+    padding: 0 25px;
+    border-radius: 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+#page .TokenSociety_NFT_preview_tool button[name=placeBid] {
+    background: #6ead80;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #6ead80 0%, #68a87b 50%, #3c7c50 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ead80', endColorstr='#3c7c50', GradientType=0);
+    /* IE6-9 */
+}
+#page .TokenSociety_NFT_preview_tool button[name=soldOut] {
+    background: red;
+}
+
+.TokenSociety_NFT_preview_tool .tokensociety_create_tiles {
+    height: 650px !important;
+}
+
+.TokenSociety_NFT_preview_tool .tokensociety_create_video {
+    margin-top: 80px;
+}
+
+.TokenSociety_NFT_preview_tool .tokensociety_create_video h4 {
+    text-align: center;
+    margin-top: 50%;
+    font-size: 26px;
+}
+
+.TokenSociety_NFT_preview_tool .tokensociety_create_video_footer {
+    margin-top: 25%;
+    margin-bottom: 30%;
+}
+
+
+/***create nft form css***/
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft form {
+    padding: 20px;
+    background: #fff;
+    font-size: 20px;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft label {
+    color: #000;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft .tokensociety_nft_form_group {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_form_control {
+    background: transparent;
+    color: rgba(4, 4, 5, 0.8);
+    font-weight: 500;
+    font-family: inherit !important;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    border-width: 0 0 2px !important;
+    border-top-color: initial !important;
+    border-right-color: initial !important;
+    border-left-color: initial !important;
+    border-image: initial !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-color: rgba(4, 4, 5, 0.07) !important;
+    border-style: solid !important;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_picture {
+    text-align: center;
+    border: 2px dashed rgba(4, 4, 5, 0.1);
+    min-height: 115px;
+    position: relative;
+    border-radius: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.TokenSociety_NFT_preview_composer .image_file {
+    position: absolute;
+    height: 110px;
+    background: transparent;
+    opacity: 0;
+    left: 0;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_picture_text {
+    color: #000;
+    font-size: 16px;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_upload_button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: rgb(0, 102, 255);
+    background: rgba(0, 102, 255, 0.15);
+    width: 160px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_form_group p {
+    color: #000;
+    font-size: 13px;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_market_button .tokensociety_nft_clickable {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    margin: 6px;
+    width: 100%;
+    padding: 0 20px;
+    border: 2px solid rgba(4, 4, 5, 0.1);
+    border-radius: 16px;
+    transition: all 0.12s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.TokenSociety_NFT_preview_composer .active {
+    border: 2px solid rgb(0, 102, 255) !important;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_clickable span {
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_market_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TokenSociety_NFT_preview_composer .tokenSociety_price {
+    display: flex;
+    align-items: baseline;
+}
+
+.TokenSociety_NFT_preview_composer .tokenSociety_price select {
+    background: transparent;
+    padding: 0;
+    color: rgba(4, 4, 5, 0.8);
+    font-weight: 500;
+    font-family: inherit;
+    outline: none;
+    border-width: 0 0 2px;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    border-bottom-color: rgba(4, 4, 5, 0.07);
+}
+
+.TokenSociety_NFT_preview_composer input[type="datetime-local"i] {
+    background: transparent;
+    padding: 0;
+    color: rgba(4, 4, 5, 0.8);
+    font-weight: 500;
+    font-family: inherit;
+    overflow: hidden;
+    outline: none;
+    width: 90%;
+    border-width: 0 0 2px;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    border-bottom-color: rgba(4, 4, 5, 0.07);
+    border-style: solid;
+}
+
+.TokenSociety_NFT_preview_composer button[name=save] {
+    white-space: nowrap;
+    color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.TokenSociety_NFT_preview_composer .tokenSociety_royality {
+    display: flex;
+    align-items: center;
+}
+
+.TokenSociety_NFT_preview_composer .tokenSociety_royality span {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_market {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TokenSociety_NFT_preview_composer .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.TokenSociety_NFT_preview_composer .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.TokenSociety_NFT_preview_composer .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.TokenSociety_NFT_preview_composer .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.TokenSociety_NFT_preview_composer input:checked+.slider {
+    background-color: #2196F3;
+}
+
+.TokenSociety_NFT_preview_composer input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.TokenSociety_NFT_preview_composer input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.TokenSociety_NFT_preview_composer .slider.round {
+    border-radius: 34px;
+}
+
+.TokenSociety_NFT_preview_composer .slider.round:before {
+    border-radius: 50%;
+}
+
+/* new css */
+#tokensociety_nft_data_list, #tokensociety_nft_data_list1{
+    padding-left: 0;
+}
+
+#tokensociety_nft_data_list img, .tokensociety_nft_btn_select img ,   #tokensociety_nft_data_list1 img, .btn-select1 img{
+    width: 16px;
+
+}
+
+#tokensociety_nft_data_list li, #tokensociety_nft_data_list1 li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+#tokensociety_nft_data_list li:hover , #tokensociety_nft_data_list1 li:hover{
+    background-color: #F4F3F3;
+}
+
+#tokensociety_nft_data_list li img, #tokensociety_nft_data_list1 li img{
+    margin: 5px;
+}
+
+#tokensociety_nft_data_list li span,  #tokensociety_nft_data_list1 li span{
+    color: #000;
+    font-weight: 900;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+/* item list */
+
+.tokensociety_nft_data_view, .tokensociety_nft_data_view1{
+    display: none;
+    width: 140px;
+    max-width: 350px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    background: #fff;
+
+}
+
+.open{
+    display: block !important;
+}
+.tokensociety_nft_select_lang, .tokensociety_nft_select_lang1{
+    position: relative;
+}
+.tokensociety_nft_btn_select, .tokensociety_nft_btn_select1{
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-width: 0 0 2px;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    min-height: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-color: rgba(4, 4, 5, 0.07);
+    border-style: solid;
+}
+.tokensociety_nft_btn_select li, .tokensociety_nft_btn_select1 li{
+    list-style: none;
+    padding-bottom: 0;
+    display: flex;
+}
+.tokensociety_nft_btn_select li span, .tokensociety_nft_btn_select1 li span{
+    color: #000;
+    font-size: 16px;
+    font-weight: 900;
+
+}
+
+.tokensociety_nft_btn_select:hover li, .tokensociety_nft_btn_select1:hover li{
+    margin-left: 0;
+}
+.tokensociety_nft_btn_select img, .tokensociety_nft_btn_select1 img{
+    width: 16px;
+    margin-left: 10px;
+}
+
+.TokenSociety_NFT_preview_tool {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 350px;
+    min-height: 680px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0.8%;
+
+}
+.layout-container {
+    max-width: 1463px;
+    margin: 0 auto;
+    padding: 40px 5px 0 ;
+}
+.TokenSociety_NFT_preview_tool .tile_block_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: solid 1px #414141;
+}
+
+.TokenSociety_NFT_preview_tool ul.online-c {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.TokenSociety_NFT_preview_tool ul.online-c li {
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.TokenSociety_NFT_preview_tool ul.online-c li:nth-child(2) {
+    z-index: 1;
+    margin-left: -20px;
+}
+
+.TokenSociety_NFT_preview_tool ul.online-c li img {
+    display: block;
+}
+
+.TokenSociety_NFT_preview_tool span.m-t {
+    /*margin-left: 19px;*/
+    /*margin-right: 8px;*/
+}
+
+.TokenSociety_NFT_preview_tool ul.bid-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 60px;
+}
+
+.TokenSociety_NFT_preview_tool ul.bid-info li {
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.TokenSociety_NFT_preview_tool ul.bid-info li p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.TokenSociety_NFT_preview_composer .tokensociety_nft_form_details[data-active=false] {
+    display: none;
+}
+
+/* .TokenSociety_NFT_preview_tool .TokenSociety_NFT_startDate .dateDays, .TokenSociety_NFT_preview_tool .TokenSociety_NFT_endDate .dateDays {
+    display: block;
+} */
+/***create nft form css ends here***/
+
+.TokenSociety_NFT_preview_tool .Q_actions_container {
+    top: 10px !important;
+}
+
+.tokensociety_nft_select,
+.tokensociety_nft_select1,
+.Users_loggedOut .TokenSociety_NFT_preview_tool .forward-btn,
+.tokensociety_nft_btn_select img:first-child,
+.tokensociety_nft_btn_select1 img:first-child,
+#tokensociety_nft_data_list .down,
+#tokensociety_nft_data_list1 .down,
+.TokenSociety_NFT_preview_tool .TokenSociety_NFT_startDate,
+.TokenSociety_NFT_preview_tool .TokenSociety_NFT_endDate,
+#page .TokenSociety_NFT_preview_tool.TokenSociety_NFT_notStarted button[name=placeBid],
+#page .TokenSociety_NFT_preview_tool.TokenSociety_NFT_self button[name=placeBid],
+#page .TokenSociety_NFT_preview_tool[data-onSale=false] button[name=placeBid],
+#page .TokenSociety_NFT_preview_tool[data-onSale=true] button[name=soldOut],
+#page .TokenSociety_NFT_preview_tool[data-onSale=false] .TokenSociety_NFT_price,
+.TokenSociety_NFT_preview_tool[data-owned=false] .TokenSociety_owner {
+    display: none;
+}
+.video-container img {
+    width: 100%;
+}
+
+@media (max-width:1440px) {
+    .TokenSociety_NFT_preview_tool h2.tile-name {
+        font-size: 21px;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .TokenSociety_NFT_preview_tool .video-container img {
+        height: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .TokenSociety_NFT_preview_tool .video-container .v-btn {
+        width: 50px;
+        height: 50px;
+        background-size: 100%;
+    }
+
+    .TokenSociety_NFT_preview_tool .tokensociety_create_video h4 {
+        margin: 25% auto;
+    }
+    .TokenSociety_NFT_preview_composer .switch {
+        width: 65px;
+    }
+    .TokenSociety_NFT_preview_composer .tokensociety_market_button .tokensociety_nft_clickable {
+        padding: 0 6px;
+    }
+    .TokenSociety_NFT_preview_composer .tokensociety_nft form {
+        padding: 10px;
+    }
+    .tokenSociety_price div{
+        width: 50%;
+    }
+
+}

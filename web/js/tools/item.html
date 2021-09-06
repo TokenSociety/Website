@@ -1,0 +1,69 @@
+<template id="TokenSociety/item" data-text='["TokenSociety/content"]'>
+
+    <div class="tile-block">
+        <ul class="online-c">
+            <li><img src="{{src1}}" width="60" height="61" alt="1"></li>
+            <li><img src="{{src2}}" width="60" height="61" alt="1"></li>
+        </ul>
+        <p class="categories">{{category}}</p>
+        <div class="video-container"><img src="{{src3}}" width="316" height="374" alt="1"> <a href="#"
+                                                                                              class="v-btn"></a></div>
+        <h2 class="tile-name">{{title}}</h2>
+        <ul class="bid-info">
+            <li><span>{{item.CurrentBid}}</span>
+                <p>{{amount}} {{currency}}</p>
+            </li>
+            <li><span>{{item.EndingIn}}</span>
+                <p><span class="hour-t">12h</span> <span class="m-t">56m</span> <span class="s-t">46s</span></p>
+            </li>
+        </ul>
+    </div>
+    <div class="action-block"><span class="likes">233</span> <span class="forward-btn"><a href="#"
+                                                                                          class="forward-btn"></a></span>
+        <a href="#" class="btn-g">Place Bid</a></div>
+
+</template>
+<style>
+
+</style>
+<script>
+
+    /**
+     * @module TokenSociety
+     */
+
+    /**
+     * Used to display and edit item in TokenSociety
+     * @class TokenSociety cool
+     * @constructor
+     * @param {Object} [options] Override various options for this tool
+     * @param {String} [options.publisherId] user id of the publisher of the stream
+     * @param {String} [options.streamName] the stream's name
+     * @param {String} [options.id] the id of the field
+     * @param {String} [options.title] title of the field
+     * @param {String} [options.src1] first image
+     * @param {String} [options.src2] second image
+     * @param {String} [options.src3] video background image of the item block
+     * @param {Number} [options.amount] amount
+     * @param {String} [options.currency] the unit of account for amount (eg. 'ETH')
+     * @param {Q.Event} [options.onMove] Event that fires after a move
+     */
+
+    Q.Tool.define("TokenSociety/item", function (options) {
+            var tool = this;
+            var state = tool.state;
+            let fields = Q.extend({}, options);
+            Q.Template.render('TokenSociety/item', fields, (err, html) => {
+                tool.element.innerHTML = html;
+            });
+        },
+
+        { // default options here
+            currency: 'ETH'
+        },
+
+        { // methods go here
+
+
+        });
+</script>

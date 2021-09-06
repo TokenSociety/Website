@@ -1,0 +1,228 @@
+.tokensociety_nft_col_four {
+    width: 40%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.tokensociety_nft{
+    margin-bottom: 80px;
+}
+.tokensociety_nft_col_eight{
+    width: 60%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left; 
+}
+
+.tokensociety_nft_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+}
+ 
+.tokensociety_nft_image {
+    text-align: center;
+}
+
+.tokensociety_nft_image img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.tokensociety_nft_details_header_right {
+    white-space: nowrap;
+}
+.tokensociety_nft_details_header_right i {
+    border: 1px solid #b5b3b3;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.tokensociety_nft_details_header_right.Q_selected {
+    border: none;
+    background: none;
+    margin: 0;
+    color: #57ab6d;
+    font-weight: bold;
+}
+.tokensociety_nft_details_header_right .fa-heart {
+    cursor: pointer;
+}
+
+.tokensociety_nft_details_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.tokensociety_nft_details_header_left h2 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.tokensociety_nft_span {
+    margin-top: 10px;
+    color: #8e8e8e;
+    font-weight: 800;
+}
+
+.tokensociety_nft_art {
+    width: fit-content;
+    border: 1px solid #ddd;
+    padding: 4px 20px;
+    border-radius: 30px;
+}
+
+.tokensociety_nft_body_left span {
+    font-weight: 800;
+    color: #968e8e;
+    display: block;
+    white-space: nowrap;
+}
+
+.tokensociety_nft_body_details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.tokensociety_nft_body_details span {
+    margin-left: 10px;
+}
+
+.tokensociety_nft_buttons {
+    background: linear-gradient(45deg, #f5b7f0, #e7e2ee);
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.tokensociety_nft_tabs ul {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+
+.tokensociety_nft_tabs li {
+    display: inline-block;
+    font-weight: 900;
+    margin-right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 2px solid #847979;
+    padding-bottom: 20px;
+}
+
+.tokensociety_nft_footer a {
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    width: 48%;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+}
+
+.tokensociety_nft_sale {
+    border: 1px solid #46008c;
+    background: #46008c;
+    color: #fff;
+}
+
+.tokensociety_nft_transfer {
+    color: #46008c;
+    background: #fff;
+}
+.tabcontent{
+    display: none;
+}
+.active-content{
+    display: block;
+}
+.tokensociety_nft_body_left{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.tokensociety_nft_body_left img {
+    width: 40px;
+    height: 40px;
+}
+.tokensociety_nft_body_left .tokensociety_nft_wallet {
+    font-size: 14px;
+}
+
+.NFT_preview_tool .Streams_preview_icon {
+    height: auto;
+}
+.NFT_preview_tool .Streams_preview_contents {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .tokensociety_nft_image img {
+        width: 100%;
+    }
+    .tokensociety_nft {
+        margin-bottom: 10px;
+    }
+    .tokensociety_nft_body_left {
+        margin-right: 3%;
+    }
+    
+    
+    .tokensociety_nft_col_eight, .tokensociety_nft_col_four  {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .tokensociety_nft_details {
+        width: 100%;
+    }
+
+    .tokensociety_nft_row {
+        flex-wrap: wrap;
+    }
+
+    .tokensociety_nft_tabs li {
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .tokensociety_nft_footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .tokensociety_nft_transfer {
+        margin-left: 0;
+    }
+    .tokensociety_nft_details_header_left h2 {
+        font-size: 26px;
+    }
+    .layout-container {
+        padding-top: 0 !important;
+    }
+    .tokensociety_nft_details_header_right i {
+        border: 1px solid #b5b3b3;
+        padding: 8px;
+        margin: 4px;
+        border-radius: 50%;
+    }
+}
